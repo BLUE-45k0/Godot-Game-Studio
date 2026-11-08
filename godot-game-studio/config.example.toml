@@ -1,0 +1,35 @@
+# Review every value below before running: no version number or URL is assumed to be correct.
+
+[llm]
+# The model name is read from the GGS_MODEL environment variable (see .env.example), not from here.
+model_env_var = "GGS_MODEL"
+api_key_env_var = "ANTHROPIC_API_KEY"
+max_tokens = 8000
+temperature = 0.7
+max_retries = 3
+
+[godot]
+# Empty = static checks only (the QA report will say so explicitly).
+# Example: executable_path = "C:/Godot/Godot_v4.x-stable_win64_console.exe"
+executable_path = ""
+# Written into config/features of project.godot, e.g. "4.3". Empty = auto-detect from the
+# executable if given, otherwise the version line is omitted and a warning is reported.
+target_version = ""
+headless_timeout_sec = 120
+
+[qa]
+max_fix_attempts = 3
+
+[assets]
+prefer_kenney = true
+download_timeout_sec = 20
+# Put the direct download URLs of CC0 packs here after checking them on kenney.nl.
+# If empty or unreachable, the tool falls back to procedural generation automatically.
+kenney_pack_urls = []
+
+[output]
+base_dir = "output"
+overwrite_existing = false
+
+[playtesters]
+enabled = ["brainrot", "hardcore", "casual", "critic", "chaos_qa"]

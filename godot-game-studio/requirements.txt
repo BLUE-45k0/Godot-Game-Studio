@@ -1,0 +1,8 @@
+# Package names only (no pinned versions). After your first successful run, pin them with `pip freeze`.
+anthropic
+python-dotenv
+pydantic
+pillow
+numpy
+requests
+pytest
